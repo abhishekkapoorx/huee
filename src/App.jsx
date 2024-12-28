@@ -4,7 +4,7 @@ import LandingPage from './components/LandingPage'
 
 const App = () => {
   return (
-    <div className='w-full h-screen bg-zinc-900 text-white font-'>
+    <div className='w-full h-screen text-white font-'>
       <Navbar />
       <LandingPage />
 
