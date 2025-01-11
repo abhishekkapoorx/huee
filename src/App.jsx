@@ -7,15 +7,16 @@ import Eyes from './components/Eyes'
 import FeaturedProjects from './components/FeaturedProjects'
 import LocomotiveScroll from 'locomotive-scroll';
 import './assets/locomotive-scroll.css';
+import ReadyToStart from './components/ReadyToStart'
 
 const App = () => {
   useEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true,
-    });
+    // const scroll = new LocomotiveScroll({
+    //   el: document.querySelector('[data-scroll-container]'),
+    //   smooth: true,
+    // });
 
-    return () => scroll.destroy();
+    // return () => scroll.destroy();
   }, []);
 
   return (
@@ -27,6 +28,7 @@ const App = () => {
       <About />
       <Eyes />
       <FeaturedProjects/>
+      <ReadyToStart />
 
     </main>
   )

@@ -1,5 +1,6 @@
 import React from 'react'
 import Cards from './Cards'
+import Button from './Button'
 
 const FeaturedProjects = () => {
   return (
@@ -18,10 +19,11 @@ const FeaturedProjects = () => {
                 cardImage2='/Frame.png'
             />
         </div>
-        <div className="button flex justify-between items-center bg-zinc-800 py-4 px-8 rounded-full mt-10">
+        {/* <div className="button flex justify-between items-center bg-zinc-800 py-4 px-8 rounded-full mt-10">
             <div className="text-white font-montreal text-lg">View All Case Studies</div>
             <div className="h-2 w-2 bg-white rounded-full ml-4"></div>
-        </div>
+        </div> */}
+        <Button text={"View All Case Studies"}/>
     </div>
   )
 }

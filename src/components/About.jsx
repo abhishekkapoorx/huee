@@ -1,5 +1,6 @@
 import React from 'react'
 import { FaArrowUpLong } from 'react-icons/fa6'
+import Button from './Button'
 
 const About = () => {
   return (
@@ -13,13 +14,7 @@ const About = () => {
           <h2 className="font-normal font-montreal text-7xl">
             Our approach:
           </h2>
-          <button className="h-20 w-60 mt-8 rounded-full py-4 px-8 bg-zinc-900 text-white uppercase text-xl font-montreal font-light flex justify-between items-center gap-4">Read More
-            <div className="rounded-full hover:w-8 hover:h-8 w-3 h-3 hover:m-0 mr-3 bg-white relative right-0 transition-all ease-in-out">
-              <div className="arr rotate-45 hidden w-full h-full transform transition-all ease-in-out text-black">
-                <FaArrowUpLong color='black' />
-              </div>
-            </div>
-          </button>
+          <Button text="Read More" />
 
         </div>
         <div>

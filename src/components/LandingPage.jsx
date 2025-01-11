@@ -1,7 +1,24 @@
-import React from 'react'
-import { FaArrowUpLong } from 'react-icons/fa6'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap'
+import React from 'react';
+import { FaArrowUpLong } from 'react-icons/fa6';
 
 const LandingPage = () => {
+    useGSAP(() => {
+        gsap.from("#greenDiv", {
+            scaleX: 0,
+            xPercent: -50,
+            duration: 1,
+            delay: 0.7,
+            ease: "power3.out",
+        })
+        gsap.from("#nextText", {
+            x: -150,
+            duration: 1,
+            delay: 0.7,
+            ease: "power3.out",
+        })
+    }, []);
     return (
         <div className='w-full h-screen bg-zinc-900 pt-1' data-scroll-speed="-3" data-scroll>
             <div className="textStructure mt-44 px-20">
@@ -9,8 +26,8 @@ const LandingPage = () => {
                     <div className="masker" key={text + index}>
                         <div className="w-fit flex items-center">
 
-                            {index === 1 && <div className='w-[9rem] h-[6rem] relative top-2 bg-green-500 rounded-lg mr-2'></div>}
-                            <h1 className='uppercase text-[9rem] leading-[0.8] tracking-tight font-bold font-founders'>{text}</h1>
+                            {index === 1 && <div className='w-[9rem] h-[6rem] relative top-2 bg-green-500 rounded-lg mr-2' id='greenDiv'></div>}
+                            <h1 className='uppercase text-[9rem] leading-[0.8] tracking-tight font-bold font-founders' id={index === 1 ? "nextText" : ""}>{text}</h1>
                         </div>
                     </div>
                 ))}
