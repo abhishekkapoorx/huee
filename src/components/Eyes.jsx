@@ -46,7 +46,7 @@ const Eyes = () => {
     }, []); // Empty dependency array ensures this runs once on mount.
 
     return (
-        <div className='relative -z-10 w-full bg-[url("/Top-Viewbbcbv-1-scaled.jpg")] h-screen bg-cover bg-center flex items-center justify-center' data-speed="clamp(0.5)">
+        <div className='relative z-10 w-full bg-[url("/Top-Viewbbcbv-1-scaled.jpg")] h-screen bg-cover bg-center flex items-center justify-center' data-speed="clamp(0.5)">
             <div className="eyebox rounded-full flex items-center justify-center gap-10">
                 <div className="bg-white rounded-full h-72 w-72 flex items-center justify-center">
                     <div
