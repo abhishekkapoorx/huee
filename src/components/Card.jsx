@@ -8,7 +8,7 @@ const Card = ({title, imgSrc, setSelectedText}) => {
             {title}
         </div>
         <div className="rounded-xl mt-8 w-full overflow-hidden shadow-lg hover:scale-95 transition-all ease-in-out hover:blur-0 blur-sm">
-            <img src={imgSrc} alt={title} className="rounded-xl scale-100 hover:scale-110  transition-all ease-in-out" />
+            <img src={imgSrc} alt={title} className="rounded-xl scale-100 hover:scale-110 max-h-[40rem]  transition-all ease-in-out" /> 
         </div>
     </div>
   )
