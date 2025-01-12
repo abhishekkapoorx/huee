@@ -1,24 +1,29 @@
 import React, { useState } from 'react'
 import Card from './Card'
 import { gsap } from 'gsap'
-import SplitText from "gsap-trial/SplitText" 
+// import SplitText from "gsap-trial/SplitText" 
 import { useGSAP } from '@gsap/react'
 
 
 const Cards = ({ cardTitle1, cardTitle2, cardImage1, cardImage2 }) => {
     const [selectedText, setSelectedText] = useState("")
     
-    gsap.registerPlugin(SplitText);
+    // gsap.registerPlugin(SplitText);
     useGSAP(() => {
-        let split = new SplitText("#selectedText", {type: "chars"});
-        const tl = gsap.timeline();
-        tl.from(split.chars, {
+        // let split = new SplitText("#selectedText", {type: "chars"});
+
+        gsap.fromTo("#selectedText", {
             duration: 0.5, 
             y: 100, 
             autoAlpha: 0, 
-            stagger: 0.05
+          }, {
+            y: 0, 
+            autoAlpha: 1, 
+            duration: 0.5, 
+            ease: "power3.inOut", 
+            delay: 0,
           });
-        
+        console.log(selectedText)
 
     }, [selectedText]);
     return (

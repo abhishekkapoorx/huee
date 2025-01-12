@@ -15,7 +15,7 @@ const Navbar = () => {
     return (
         <div className='nav fixed z-[999] w-full px-20 py-8 font-montreal flex justify-between items-center bg-white-700  backdrop-filter backdrop-blur-lg bg-opacity-10' >
             <div className="logo">
-                <img src="/SVG/Huee_white.svg" width={80} height={40} alt="logo" />
+                <img src="/huee/SVG/Huee_white.svg" width={80} height={40} alt="logo" />
             </div>
 
             <div className="links flex gap-4">

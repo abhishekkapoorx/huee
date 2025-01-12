@@ -15,8 +15,8 @@ const FeaturedProjects = () => {
             <Cards 
                 cardTitle1='Brewed Essence'
                 cardTitle2='Iconic Collections'
-                cardImage1='/coffee.jpg'
-                cardImage2='/eyeHospital.jpg'
+                cardImage1='/huee/coffee.jpg'
+                cardImage2='/huee/eyeHospital.jpg'
             />
         </div>
         {/* <div className="button flex justify-between items-center bg-zinc-800 py-4 px-8 rounded-full mt-10">

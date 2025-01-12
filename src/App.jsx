@@ -1,6 +1,6 @@
 import { useGSAP } from '@gsap/react'
-import gsap from 'gsap'
-import { ScrollSmoother } from 'gsap-trial/ScrollSmoother'
+// import gsap from 'gsap'
+// import { ScrollSmoother } from 'gsap-trial/ScrollSmoother'
 import React from 'react'
 import About from './components/About'
 import Eyes from './components/Eyes'
@@ -12,15 +12,15 @@ import ReadyToStart from './components/ReadyToStart'
 
 const App = () => {
 
-  gsap.registerPlugin(ScrollSmoother);
+  // gsap.registerPlugin(ScrollSmoother);
   useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 1,
-      smoothTouch: true,
-      effects: true,
+    // ScrollSmoother.create({
+    //   smooth: 1,
+    //   smoothTouch: true,
+    //   effects: true,
 
 
-    })
+    // })
   }, []);
 
   return (
