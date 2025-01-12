@@ -4,7 +4,7 @@ import Button from './Button'
 
 const About = () => {
   return (
-    <div className='w-full py-28 px-16 bg-[#CDEA68] rounded-t-3xl text-zinc-900' data-scroll-speed="-1.5" data-scroll>
+    <div className='w-full py-28 px-16 bg-[#CDEA68] rounded-t-3xl text-zinc-900' data-speed="clamp(0.8)">
       <h1 className='font-montreal text-6xl text-zinc-900 max-w-[80vw] leading-none'>
         Ochi is a strategic presentation agency for forward-thinking businesses that need to <span className="underline">raise funds</span>, <span className="underline">sell prod­ucts</span>, <span className="underline">ex­plain com­plex ideas</span>, and <span className="underline">hire great peo­ple</span>.
       </h1>
@@ -14,7 +14,7 @@ const About = () => {
           <h2 className="font-normal font-montreal text-7xl">
             Our approach:
           </h2>
-          <Button text="Read More" />
+          <Button text="Read More" containerClasses={"mt-10"}/>
 
         </div>
         <div>

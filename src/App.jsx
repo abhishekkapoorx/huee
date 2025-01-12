@@ -1,34 +1,41 @@
-import React, { useEffect } from 'react'
-import Navbar from './components/Navbar'
-import LandingPage from './components/LandingPage'
-import Marquee from './components/Marquee'
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap'
+import { ScrollSmoother } from 'gsap-trial/ScrollSmoother'
+import React from 'react'
 import About from './components/About'
 import Eyes from './components/Eyes'
 import FeaturedProjects from './components/FeaturedProjects'
-import LocomotiveScroll from 'locomotive-scroll';
-import './assets/locomotive-scroll.css';
+import LandingPage from './components/LandingPage'
+import Marquee from './components/Marquee'
+import Navbar from './components/Navbar'
 import ReadyToStart from './components/ReadyToStart'
 
 const App = () => {
-  useEffect(() => {
-    // const scroll = new LocomotiveScroll({
-    //   el: document.querySelector('[data-scroll-container]'),
-    //   smooth: true,
-    // });
 
-    // return () => scroll.destroy();
+  gsap.registerPlugin(ScrollSmoother);
+  useGSAP(() => {
+    ScrollSmoother.create({
+      smooth: 1,
+      smoothTouch: true,
+      effects: true,
+
+
+    })
   }, []);
 
   return (
 
-    <main data-scroll-container className='w-full min-h-screen text-white bg-zinc-900 '>
-      <Navbar/>
-      <LandingPage />
-      <Marquee />
-      <About />
-      <Eyes />
-      <FeaturedProjects/>
-      <ReadyToStart />
+    <main className='w-full min-h-screen text-white bg-zinc-900' id='smooth-wrapper'>
+      <Navbar />
+      <div id="smooth-content">
+        <LandingPage />
+        <Marquee />
+        <About />
+        <Eyes />
+        <FeaturedProjects />
+        <ReadyToStart />
+      </div>
+
 
     </main>
   )

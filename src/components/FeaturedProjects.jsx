@@ -4,7 +4,7 @@ import Button from './Button'
 
 const FeaturedProjects = () => {
   return (
-    <div className='w-full h-full py-28 bg-stone-100 text-zinc-900 flex flex-col justify-center items-center' data-scroll-speed="-1" data-scroll>
+    <div className='w-full h-full py-28 bg-stone-100 text-zinc-900 flex flex-col justify-center items-center z-0' data-speed="clamp(1)">
         <div className="w-full px-20 border-b border-zinc-300 pb-10">
             <h1 className="text-6xl font-montreal font-light">
                 Featured Projects
@@ -23,7 +23,7 @@ const FeaturedProjects = () => {
             <div className="text-white font-montreal text-lg">View All Case Studies</div>
             <div className="h-2 w-2 bg-white rounded-full ml-4"></div>
         </div> */}
-        <Button text={"View All Case Studies"}/>
+        <Button text={"View All Case Studies"} containerClasses={"mt-10"}/>
     </div>
   )
 }

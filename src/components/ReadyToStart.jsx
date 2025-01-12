@@ -47,8 +47,8 @@ const ReadyToStart = () => {
     }, []); // Empty dependency array ensures this runs once on mount.
 
     return (
-        <div className="bg-[#CDEA68]" data-scroll-speed="-2" data-scroll>
-            <div className="bg-[#CDEA68] w-full absolute z-10 flex flex-col justify-center items-center py-36">
+        <div className="bg-[#CDEA68] z-50 min-h-[125vh]" data-speed="clamp(0.9)">
+            <div className="bg-[#CDEA68] w-full min-h-screen absolute z-20 flex flex-col justify-center items-center py-36">
                 <div className="text-[17rem] w-3/4 font-founders uppercase font-black text-zinc-800 leading-[0.75] tracking-tight text-center flex flex-col items-center justify-center">
                     <div>Ready</div>
                     <div>to Start</div>
@@ -57,7 +57,7 @@ const ReadyToStart = () => {
 
                 <Button text="Start the Project" containerClasses="mt-32" textClasses="text-2xl" />
             </div>
-            <div className='absolute z-20 w-full  h-screen bg-cover bg-center flex items-center justify-center'>
+            <div className='absolute z-30 w-full  h-screen bg-cover bg-center flex items-center justify-center'>
                 <div className="eyebox rounded-full flex items-center justify-center gap-10">
                     <div className="bg-white rounded-full h-52 w-52 flex items-center justify-center">
                         <div

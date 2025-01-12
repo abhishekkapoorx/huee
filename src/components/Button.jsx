@@ -17,8 +17,8 @@ const Button = ({text, containerClasses, textClasses}) => {
             rotate: 45,
             yPercent: isHovered ? 50 : 0,
             scale: isHovered ? 1.25 : 0,
-            duration: 0.75,
-            ease: "power3.inOut",
+            duration: 0.35,
+            ease: "power2.inOut",
         })
 
     }, [isHovered]);

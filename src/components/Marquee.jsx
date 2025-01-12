@@ -44,7 +44,7 @@ const Marquee = () => {
     }, {dependencies: [window.innerWidth]});
 
     return (
-        <div className='w-full py-16 text-white bg-[#004D43] rounded-t-3xl overflow-hidden' data-scroll-speed="-1" data-scroll>
+        <div className='w-full py-16 text-white bg-[#004D43] rounded-t-3xl overflow-hidden' data-speed="clamp(1)">
             <div className="border-t-2 border-b-2 border-zinc-300/10 ">
                 <div className="uppercase flex items-center whitespace-nowrap" ref={marqueeRef}>
                     {[...Array(4).keys()].map((item, index) => <h1 key={item+index} className='leading-none text-[24rem] font-black font-founders'>We are ochi&nbsp;</h1>)}

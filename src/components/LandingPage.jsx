@@ -9,18 +9,25 @@ const LandingPage = () => {
             scaleX: 0,
             xPercent: -50,
             duration: 1,
-            delay: 0.7,
-            ease: "power3.out",
+            delay: 1,
+            ease: "power2.out",
         })
         gsap.from("#nextText", {
             x: -150,
             duration: 1,
-            delay: 0.7,
-            ease: "power3.out",
+            delay: 1,
+            ease: "power2.out",
+        })
+        gsap.from("#lowerSection", {
+            y: 100,
+            autoAlpha: 0.15,
+            duration: 1,
+            ease: "power2.inOut",
+            delay: 0,
         })
     }, []);
     return (
-        <div className='w-full h-screen bg-zinc-900 pt-1' data-scroll-speed="-3" data-scroll>
+        <div className='w-full h-screen bg-zinc-900 pt-1' data-speed="clamp(0)" >
             <div className="textStructure mt-44 px-20">
                 {["We Create", "Eye Opening", "Presentations"].map((text, index) => (
                     <div className="masker" key={text + index}>
@@ -33,7 +40,7 @@ const LandingPage = () => {
                 ))}
             </div>
 
-            <div className="mt-32 border-t-[1px] border-zinc-400 py-5 px-16 flex justify-between items-center font-montreal">
+            <div className="mt-32 border-t-[1px] border-zinc-400 py-5 px-16 flex justify-between items-center font-montreal" id='lowerSection'>
                 {["For public and private companies", "From the first pitch to IPO"].map((text, index) => (
                     <div className="text-xl font-ligh" key={text + index}>{text}</div>
                 ))}
